@@ -35,6 +35,18 @@ class ViewController: UIViewController {
     
     @IBAction func changeStateTapped(sender: UIButton) {
         
+        let yellow = UIColor(red: 255/255, green: 209/255, blue: 77/255, alpha: 1.0)
+        let brown = UIColor(red: 108/255, green: 76/255, blue: 73/255, alpha: 1.0)
+        
+        if demoSwitch.on {
+            demoSwitch.onTintColor = yellow
+            demoSwitch.thumbTintColor = UIColor(red: 87/255, green: 175/255, blue: 63/255, alpha: 1.0)
+        }
+        else {
+            demoSwitch.tintColor = brown
+            demoSwitch.thumbTintColor = brown
+        }
+        
     }
     
     
