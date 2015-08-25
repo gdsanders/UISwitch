@@ -21,6 +21,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "UISwitchBackground")!)
+        
+        print("The initial value is \(demoSwitch.on)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +40,11 @@ class ViewController: UIViewController {
     
     @IBAction func switchStateTapped(sender: UISwitch) {
         
+        print("The switch has changed. The value is now \(sender.on)")
         
+        let purple = UIColor(red: 189/255, green: 81/255, blue: 222/255, alpha: 1.0)
+        
+        demoSwitch.thumbTintColor = purple
     }
 
 
