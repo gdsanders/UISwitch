@@ -24,6 +24,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BlW-NB-pGy">
                                 <rect key="frame" x="25" y="168" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchStateTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="CMF-bF-jQp"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Switch State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQW-2Y-JeY">
                                 <rect key="frame" x="109" y="163" width="223" height="42"/>
@@ -38,10 +41,17 @@
                                 <state key="normal" title="Change the switch's property">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeStateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dPf-3i-iTH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="demoSwitch" destination="BlW-NB-pGy" id="zQ1-FO-3Yh"/>
+                        <outlet property="switchStateLabel" destination="sQW-2Y-JeY" id="dBz-oJ-aGE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
